@@ -1,0 +1,138 @@
+//
+   Created by pugach on 17/02/16.
+doctype html
+//if lt IE 7
+  html.lt-ie9.lt-ie8.lt-ie7(lang='ru')
+//if IE 7
+  html.lt-ie9.lt-ie8(lang='ru')
+//if IE 8
+  html.lt-ie9(lang='ru')
+// [if gt IE 8] <!
+html(lang='ru')
+    // <![endif]
+    head
+        meta(charset='utf-8')
+        title The Elder Generation
+        meta(name='description', content='')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='libs/bootstrap/bootstrap-grid-3.3.1.min.css')
+        link(rel='stylesheet', href='css/fonts.css')
+        link(rel='stylesheet', href='css/main.css')
+        link(rel='stylesheet', href='css/media.css')
+        // GOOGLE MAP
+        script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+        script(type='text/javascript', src='https://www.google.com/jsapi')
+        // FORTAWESOME
+        script(src='https://use.fonticons.com/c39930c1.js')
+        // ICON IN BROWSER
+        link(rel='shortcut icon', href='images/16x16-icon/icon.png', type='image/png')
+    body
+        // FOR IE9 START (MAY BE DELETE, DON'T KNOW YET)
+        script(src='libs/html5shiv/es5-shim.min.js')
+        script(src='libs/html5shiv/html5shiv.min.js')
+        script(src='libs/html5shiv/html5shiv-printshiv.min.js')
+        script(src='libs/respond/respond.min.js')
+        // FOR IE9 END
+        script(src='libs/jquery/jquery-1.11.1.min.js')
+        script(src='js/common.js')
+        ul.menu
+            li
+                a.active(href='#')
+                    i.fa.fa-home
+                    | Home
+            li
+                a(href='#') Portfolio
+            li
+                a(href='#') About
+            li.slider
+        #main_text
+            h1 The Elder Generation
+        .container
+            .row
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                    .preMap_content
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel dictum ex. Nam tempus fringilla tincidunt. Proin vestibulum ligula a enim luctus convallis. Pellentesque vestibulum ante at lacus iaculis, sed ultricies nulla pretium. Maecenas sollicitudin, sapien ut dignissim laoreet, lacus lorem scelerisque arcu, eu congue massa mi sed quam. Cras erat erat, feugiat eu convallis et, tristique molestie nisl. Praesent ac odio sed risus malesuada elementum eget eu felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque pulvinar fringilla commodo. Etiam sed viverra tellus. Praesent ultrices urna eget turpis auctor, imperdiet facilisis ipsum luctus. Curabitur sollicitudin lorem sed gravida scelerisque. Vestibulum placerat nulla id auctor rutrum. Quisque mollis mi et neque rutrum, eu pretium mi sagittis.
+                        p
+                            | Ut faucibus, nulla consequat ultricies sagittis, orci erat ultrices orci, commodo suscipit massa nibh id nisl. Phasellus scelerisque ac tortor vel sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent et tortor id nulla lobortis accumsan ac sed lorem. Integer luctus felis et tristique placerat. Duis fringilla neque eu nunc feugiat hendrerit. Integer quis justo aliquam, rutrum quam ac, congue libero.
+                        p
+                            | Nam sit amet libero at libero mollis tincidunt. Nam quis suscipit dui. Nulla facilisi. Nulla aliquam nibh in suscipit luctus. Praesent nibh massa, varius nec tortor ac, tempor blandit lectus. Praesent faucibus interdum mauris at hendrerit. Donec tristique massa eu velit feugiat, ut faucibus felis scelerisque. Proin dapibus nulla faucibus volutpat molestie. Nulla bibendum arcu vel orci iaculis, sed vehicula dolor fringilla. In scelerisque, urna non sagittis auctor, est nunc finibus massa, nec laoreet nisl dolor tempus lorem. Aenean et eros sed augue dapibus pellentesque. Maecenas in felis orci. Nunc in nisi quis sapien vehicula viverra ac vel diam. Praesent tempor, risus vitae tempus fringilla, ante eros consequat erat, eu accumsan diam tellus in neque. Mauris consectetur congue nisi. Duis tristique suscipit lorem vel scelerisque.
+                        p
+                            | Sed porttitor, odio id aliquet efficitur, neque neque bibendum neque, eu interdum sem lectus eu risus. Nam quis metus mollis, iaculis ante in, ultrices sem. Aliquam et lacus at magna tempor lacinia ut non ex. Maecenas vel molestie erat. Cras lacinia, libero eget blandit ullamcorper, odio ex feugiat purus, nec porta nisl orci sed velit. Curabitur eu massa volutpat, accumsan massa a, bibendum nisi. Morbi mauris mi, tincidunt sit amet sagittis et, tincidunt non nibh.
+            .row
+                .col-lg-9.col-md-12.col-sm-12.col-xs-12
+                    #regions_div
+                .col-lg-3.col-md-12.col-sm-12.col-xs-12
+                    .map_info_right
+                        p
+                            | Nam sit amet libero at libero mollis tincidunt. Nam quis suscipit dui. Nulla facilisi. Nulla aliquam nibh in suscipit luctus. Praesent nibh massa, varius nec tortor ac, tempor blandit lectus. Praesent faucibus interdum mauris at hendrerit. Donec tristique massa eu velit feugiat, ut faucibus felis scelerisque. Proin dapibus nulla faucibus volutpat molestie. Nulla bibendum arcu vel orci iaculis, sed vehicula dolor fringilla. In scelerisque, urna non sagittis auctor, est nunc finibus massa, nec laoreet nisl dolor tempus lorem. Aenean et eros sed augue dapibus pellentesque. Maecenas in felis orci. Nunc in nisi quis sapien vehicula viverra ac vel diam. Praesent tempor, risus vitae tempus fringilla, ante eros consequat erat, eu accumsan diam tellus in neque. Mauris consectetur congue nisi. Duis tristique suscipit lorem vel scelerisque.
+                        p
+                            | Sed porttitor, odio id aliquet efficitur, neque neque bibendum neque, eu interdum sem lectus eu risus. Nam quis metus mollis, iaculis ante in, ultrices sem. Aliquam et lacus at magna tempor lacinia ut non ex. Maecenas vel molestie erat. Cras lacinia, libero eget blandit ullamcorper, odio ex feugiat purus, nec porta nisl orci sed velit. Curabitur eu massa volutpat, accumsan massa a, bibendum nisi. Morbi mauris mi, tincidunt sit amet sagittis et, tincidunt non nibh.
+                    .map_values_right
+                        | Value 1:
+                        span(style='background-color: #e74c3c') VALUE
+                        br
+                        br
+                        | 					Value 2:
+                        span(style='background-color: #16a085') VALUE
+                        br
+                        br
+                        | 					Value 3:
+                        span(style='background-color: #e74c3c') VALUE
+                        br
+                        br
+                        | 					Value 4:
+                        span(style='background-color: #16a085') VALUE
+                        br
+                        br
+                        | 					Value 5:
+                        span(style='background-color: #e74c3c') VALUE
+                        br
+                        br
+                        | 					Value 6:
+                        span(style='background-color: #16a085') VALUE
+                        br
+                        br
+                        | 					Value 7:
+                        span(style='background-color: #e74c3c') VALUE
+            .row
+                .footer
+                    .col-lg-4.col-md-4.col-sm-4.col-xs-6
+                        .footer_block
+                            ul
+                                li
+                                    a(href='#') Lorem ipsum dolor sit amet
+                                li
+                                    a(href='#') Consectetur adipiscing elit
+                    .col-lg-4.col-md-4.col-sm-4.col-xs-6
+                        .footer_block
+                            ul
+                                li
+                                    a(href='#') Morbi vel dictum ex
+                                li
+                                    a(href='#') Nam tempus fringilla tincidunt
+                                li
+                                    a(href='#') Proin vestibulum ligula a enim luctus convallis
+                                li
+                                    a(href='#') Lorem ipsum dolor sit amet
+                    .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                        .soc_icons
+                            .icon_wrapper1
+                                a(href='#')
+                                    i.fa.fa-vk.fa-2x
+                            .icon_wrapper2
+                                a(href='#')
+                                    i.fa.fa-twitter.fa-2x
+                            .icon_wrapper3
+                                a(href='#')
+                                    i.fa.fa-facebook.fa-2x
+                            .icon_wrapper4
+                                a(href='#')
+                                    i.fa.fa-github.fa-2x
+                    .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                        p OUR team 2016 / all rights reserved &#174
+        // Yandex.Metrika counter
+        // /Yandex.Metrika counter
+        // Google Analytics counter
+        // /Google Analytics counter

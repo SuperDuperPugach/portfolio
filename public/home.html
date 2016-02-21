@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>The Elder Generation</title>
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+	<link rel="stylesheet" href="stylesheets/fonts.css" />
+	<link rel="stylesheet" href="stylesheets/main.css" />
+	<link rel="stylesheet" href="stylesheets/media.css" />
+		<!-- GOOGLE MAP -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<!-- FORTAWESOME -->
+	<script src="https://use.fonticons.com/c39930c1.js"></script>
+		<!-- ICON IN BROWSER -->
+	<link rel="shortcut icon" href="images/16x16-icon/icon.png" type="image/png">
+<body>
+		<!-- FOR IE9 START (MAY BE DELETE, DON'T KNOW YET) -->
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+		<!-- FOR IE9 END -->
+	<script src="libs/jquery/jquery-1.11.1.min.js"></script>
+	<script src="javascripts/common.js"></script>
+	
+	<ul class="menu">
+	  <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+	  <li><a href="#">Portfolio</a></li>
+	  <li><a href="#">About</a></li>
+	  <li class="slider"></li>
+	</ul>
+	
+		<div id="main_text">
+			<h1>The Elder Generation</h1>
+		</div>
+		
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="preMap_content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel dictum ex. Nam tempus fringilla tincidunt. Proin vestibulum ligula a enim luctus convallis. Pellentesque vestibulum ante at lacus iaculis, sed ultricies nulla pretium. Maecenas sollicitudin, sapien ut dignissim laoreet, lacus lorem scelerisque arcu, eu congue massa mi sed quam. Cras erat erat, feugiat eu convallis et, tristique molestie nisl. Praesent ac odio sed risus malesuada elementum eget eu felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque pulvinar fringilla commodo. Etiam sed viverra tellus. Praesent ultrices urna eget turpis auctor, imperdiet facilisis ipsum luctus. Curabitur sollicitudin lorem sed gravida scelerisque. Vestibulum placerat nulla id auctor rutrum. Quisque mollis mi et neque rutrum, eu pretium mi sagittis.</p>
+
+				<p>Ut faucibus, nulla consequat ultricies sagittis, orci erat ultrices orci, commodo suscipit massa nibh id nisl. Phasellus scelerisque ac tortor vel sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent et tortor id nulla lobortis accumsan ac sed lorem. Integer luctus felis et tristique placerat. Duis fringilla neque eu nunc feugiat hendrerit. Integer quis justo aliquam, rutrum quam ac, congue libero.</p>
+
+				<p>Nam sit amet libero at libero mollis tincidunt. Nam quis suscipit dui. Nulla facilisi. Nulla aliquam nibh in suscipit luctus. Praesent nibh massa, varius nec tortor ac, tempor blandit lectus. Praesent faucibus interdum mauris at hendrerit. Donec tristique massa eu velit feugiat, ut faucibus felis scelerisque. Proin dapibus nulla faucibus volutpat molestie. Nulla bibendum arcu vel orci iaculis, sed vehicula dolor fringilla. In scelerisque, urna non sagittis auctor, est nunc finibus massa, nec laoreet nisl dolor tempus lorem. Aenean et eros sed augue dapibus pellentesque. Maecenas in felis orci. Nunc in nisi quis sapien vehicula viverra ac vel diam. Praesent tempor, risus vitae tempus fringilla, ante eros consequat erat, eu accumsan diam tellus in neque. Mauris consectetur congue nisi. Duis tristique suscipit lorem vel scelerisque.</p>
+
+				<p>Sed porttitor, odio id aliquet efficitur, neque neque bibendum neque, eu interdum sem lectus eu risus. Nam quis metus mollis, iaculis ante in, ultrices sem. Aliquam et lacus at magna tempor lacinia ut non ex. Maecenas vel molestie erat. Cras lacinia, libero eget blandit ullamcorper, odio ex feugiat purus, nec porta nisl orci sed velit. Curabitur eu massa volutpat, accumsan massa a, bibendum nisi. Morbi mauris mi, tincidunt sit amet sagittis et, tincidunt non nibh.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+				<div id="regions_div"></div>
+			</div>
+			<div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+				<div class="map_info_right">
+					<p>Nam sit amet libero at libero mollis tincidunt. Nam quis suscipit dui. Nulla facilisi. Nulla aliquam nibh in suscipit luctus. Praesent nibh massa, varius nec tortor ac, tempor blandit lectus. Praesent faucibus interdum mauris at hendrerit. Donec tristique massa eu velit feugiat, ut faucibus felis scelerisque. Proin dapibus nulla faucibus volutpat molestie. Nulla bibendum arcu vel orci iaculis, sed vehicula dolor fringilla. In scelerisque, urna non sagittis auctor, est nunc finibus massa, nec laoreet nisl dolor tempus lorem. Aenean et eros sed augue dapibus pellentesque. Maecenas in felis orci. Nunc in nisi quis sapien vehicula viverra ac vel diam. Praesent tempor, risus vitae tempus fringilla, ante eros consequat erat, eu accumsan diam tellus in neque. Mauris consectetur congue nisi. Duis tristique suscipit lorem vel scelerisque.</p>
+
+					<p>Sed porttitor, odio id aliquet efficitur, neque neque bibendum neque, eu interdum sem lectus eu risus. Nam quis metus mollis, iaculis ante in, ultrices sem. Aliquam et lacus at magna tempor lacinia ut non ex. Maecenas vel molestie erat. Cras lacinia, libero eget blandit ullamcorper, odio ex feugiat purus, nec porta nisl orci sed velit. Curabitur eu massa volutpat, accumsan massa a, bibendum nisi. Morbi mauris mi, tincidunt sit amet sagittis et, tincidunt non nibh.</p>
+				</div>
+				<div class="map_values_right">
+					Value 1: <span style="background-color: #e74c3c">VALUE</span>
+					<br>
+					<br>
+					Value 2: <span style="background-color: #16a085">VALUE</span>
+					<br>
+					<br>
+					Value 3: <span style="background-color: #e74c3c">VALUE</span>
+					<br>
+					<br>
+					Value 4: <span style="background-color: #16a085">VALUE</span>
+					<br>
+					<br>
+					Value 5: <span style="background-color: #e74c3c">VALUE</span>
+					<br>
+					<br>
+					Value 6: <span style="background-color: #16a085">VALUE</span>
+					<br>
+					<br>
+					Value 7: <span style="background-color: #e74c3c">VALUE</span>
+				</div>
+			</div>
+		</div>
+			<div class="row">
+				<div class="footer">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="footer_block">
+							<ul>
+								<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+								<li><a href="#">Consectetur adipiscing elit</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+						<div class="footer_block">
+							<ul>
+								<li><a href="#">Morbi vel dictum ex</a></li>
+								<li><a href="#">Nam tempus fringilla tincidunt</a></li>
+								<li><a href="#">Proin vestibulum ligula a enim luctus convallis</a></li>
+								<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="soc_icons">
+								<div class="icon_wrapper1">
+									<a href="#"><i class="fa fa-vk fa-2x"></i></a>
+								</div>
+								<div class="icon_wrapper2">
+									<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+								</div>
+								<div class="icon_wrapper3">
+									<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+								</div>
+								<div class="icon_wrapper4">
+									<a href="#"><i class="fa fa-github fa-2x"></i></a>
+								</div>
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<p>OUR team 2016 / all rights reserved &#174</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
