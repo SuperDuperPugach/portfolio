@@ -29,11 +29,11 @@ var controlStarpersDB = function () {
                 //TODO проверка нужна нормальная
                 if (count === 0) {
                     createNewStarpresDB();
-                    callback('starpers db created!');
+                    return callback(null, 'starpers db created!');
                 } else if (count < 200) {
                     Starper.remove({}, function (err) {
                         createNewStarpresDB();
-                        callback('Starpers db created!');
+                        return callback(null, 'Starpers db created!');
                     });
                 }
             }
