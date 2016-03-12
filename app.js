@@ -5,10 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
-var createNewStarpresDB = require('./separate/starpers');
 
+//parallel tasks
+//--------------------------------------------------------
+require('./separate/starpers/starpers.js')();
+//------------------------------------------------------
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var starpersRoutes = require('./routes/starpers');
 
 var app = express();
 
@@ -25,24 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
-//--------------------------------------------------------
-//FOR TEST ONLY
-app.get('/home', function(req, res, next) {
-  res.sendFile(__dirname+'/public/'+'home.html');
-});
-
-app.get('/kniga', function(req, res, next) {
-  var pathToPdf = '/home/pugach/nodejs_tutorial.pdf';
-  res.contentType('application/pdf');
-  fs.createReadStream(pathToPdf).pipe(res);
-  /*fs.readFile(pathToPdf, function(err, data) {
-    if(!err) {
-      res.contentType('application/pdf');
-      res.send(data);
-    }
-  });*/
-});
+app.use('/starpers', starpersRoutes);
 //--------------------------------------------------------
 
 // catch 404 and forward to error handler
@@ -75,9 +61,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-
-//createNewStarpresDB();
 
 
 module.exports = app;
