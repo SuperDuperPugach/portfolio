@@ -36,6 +36,9 @@ function createNewStarpresDB() {
         function(getDataFunctions, outerCallback) {  //3
             async.parallelLimit(getDataFunctions, 5,
                 function(err, results) {
+                    results = results.filter(function (item) { //избавляемся от null
+                        return item;
+                    });
                     logger.debug("Resived data size: " + results.length);
                     if(err) {
                         return outerCallback(err, 'Errors occurred during collecting starpers data')
