@@ -89,33 +89,44 @@ function getData(country) {
             country: correctCountry,
             amount: 0
         });
+        
+        var getYearDataFunctions = [];
         for(var i = AGE_MIN; i <= AGE_MAX; i++) {
-            request(customApi + "/" + i, function(error, response, body) {
-                if(error) {
-                    //TODO зачекать а не вызывается ли реквест повторно после ошибок
-                    logger.error("Errors occurred during getting data for " + country );
-                    return callback(error);
-                }
-
-                if(!error && response.statusCode == 200) {
-                    var parsedBody = JSON.parse(body);
-                    var amount = parsedBody[0].total;
-                    starper.addToTotal(amount);
-                    counter--;
-
-                }
-                if(counter === 0) {
-                    logger.debug("Data for" + country + " recieved successfully" );
-                    starper.save(function (err) {
-                        if (err) {
-                            logger.error('Can\'t write data to starpers-db for ' + country);
-                            return callback(err);
-                        }
-                        callback(null, country);
-                    });
-                }
-            });
+            getYearDataFunctions.push(getYearData(customApi + "/" + i, starper));
         }
+
+        async.parallel(getYearDataFunctions, function(err) {
+            if (err) {
+                logger.error("Errors occurred during getting data for " + country);
+                logger.error(err);
+                return callback(null, null);
+            }
+            logger.debug("Data for " + country + " recieved successfully" );
+            starper.save(function (err) {
+                if (err) {
+                    logger.error('Can\'t write data to starpers-db for ' + country);
+                    return callback(err);
+                }
+                callback(null, country);
+            });
+        });
+    }
+}
+
+//callbak for getting starper's data for one country for one year
+function getYearData(apiURL, starper) {
+    return function (callback) {
+        request(apiURL, function(error, response, body) {
+            if(error) {
+                return callback(error);
+            }
+            if(!error && response.statusCode == 200) {
+                var parsedBody = JSON.parse(body);
+                var amount = parsedBody[0].total;
+                starper.addToTotal(amount);
+                return callback(null);
+            }
+        });
     }
 }
 
